@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eed136c0-84eb-4345-a123-4cb2c46ab4af" name="Default" comment="EventLog Modification">
+      <change beforePath="$PROJECT_DIR$/media/event_logs/Road_Traffic_Fine_Management_Process.xes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/event_logs/chapter_6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/event_logs/reviewing_header.XES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/event_logs/running-example.xes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/event_logs/running-example_header_header.XES" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eB4yT5lTYCkvTi7U2AVjgyLII0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="djangoTest" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="djangoTest" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marcanova\PycharmProjects\UIFramework_pm4py\templates" />
+      <recent name="C:\Users\marcanova\PycharmProjects\UIFramework_pm4py" />
+      <recent name="C:\Users\marcanova\PycharmProjects\UIFramework_pm4py\log_filtering" />
+      <recent name="C:\Madhavi\simplificationUI\PADSTemplatePythonAppDev-master\templates" />
+      <recent name="C:\Madhavi\simplificationUI\PADSTemplatePythonAppDev-master" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marcanova\PycharmProjects\UIFramework_pm4py\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="djangoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="djangoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/log_filtering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_filtering/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eed136c0-84eb-4345-a123-4cb2c46ab4af" name="Default" comment="" />
+      <created>1592818959666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592818959666</updated>
+    </task>
+    <task id="LOCAL-00001" summary="EventLog Modification">
+      <created>1592984075348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592984075348</updated>
+    </task>
+    <task id="LOCAL-00002" summary="EventLog Modification">
+      <created>1593691030851</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593691030851</updated>
+    </task>
+    <task id="LOCAL-00003" summary="EventLog Modification">
+      <created>1594300106295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594300106295</updated>
+    </task>
+    <task id="LOCAL-00004" summary="EventLog Modification">
+      <created>1594720024837</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594720024837</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="EventLog Modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="EventLog Modification" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="614" y="262" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593769935166">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="614" y="262" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1593769935166" />
+    <state x="634" y="215" key="FileChooserDialogImpl" timestamp="1594113157740">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="634" y="215" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1594113157740" />
+    <state width="1685" height="242" key="GridCell.Tab.0.bottom" timestamp="1594719280500">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1594719280500" />
+    <state width="1685" height="242" key="GridCell.Tab.0.center" timestamp="1594719280499">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1594719280499" />
+    <state width="1685" height="242" key="GridCell.Tab.0.left" timestamp="1594719280499">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1594719280499" />
+    <state width="1685" height="242" key="GridCell.Tab.0.right" timestamp="1594719280499">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1594719280499" />
+    <state x="702" y="222" key="RollbackChangesDialog" timestamp="1595496210434">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595496210434" />
+    <state x="399" y="119" key="SettingsEditor" timestamp="1595496194371">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="355" y="105" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1594035773712" />
+    <state x="399" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595496194371" />
+    <state x="502" y="218" key="Vcs.Push.Dialog.v2" timestamp="1595496332355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="446" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1594720257366" />
+    <state x="502" y="218" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595496332355" />
+    <state x="93" y="93" width="1521" height="735" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594712373023">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="93" y="93" width="1521" height="735" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1707.920@0.0.1707.920" timestamp="1594712373023" />
+    <state x="454" y="71" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594636140123">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="454" y="71" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1707.920@0.0.1707.920" timestamp="1594636140123" />
+    <state x="897" y="317" width="652" height="534" key="find.popup" timestamp="1594665537048">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="897" y="317" width="652" height="534" key="find.popup/0.0.1707.920@0.0.1707.920" timestamp="1594665537048" />
+    <state x="612" y="280" key="git4idea.merge.GitPullDialog" timestamp="1595496319751">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="544" y="248" key="git4idea.merge.GitPullDialog/0.0.1707.920@0.0.1707.920" timestamp="1593691929801" />
+    <state x="612" y="280" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595496319751" />
+    <state x="617" y="361" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1593691909209">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="617" y="361" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1707.920@0.0.1707.920" timestamp="1593691909209" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/log_filtering/transformation.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
