@@ -1,6 +1,6 @@
-# Cohort-Analysis-Dashboard
+# Mid-granular-analysis-Tool
 
-A Tool for Cohort Based Process Analysis powered by [PM4PY](https://pm4py.fit.fraunhofer.de/)
+A Tool for Mid granular Analysis powered by [PM4PY](https://pm4py.fit.fraunhofer.de/)
 
 ## Developers
 
@@ -24,33 +24,14 @@ A Tool for Cohort Based Process Analysis powered by [PM4PY](https://pm4py.fit.fr
 
    `python manage.py runserver`
 
-3. You application is up and running. Navigate to `http://127.0.0.1:8000/` to start using CAD
+3. You application is up and running. Navigate to `http://127.0.0.1:8000/` to start using framework
 
-### Linters and Fixes
-
-1. CAD is using `flake` for detecting basic lint issues. You can find all lint constraints by running: `flake ./`
-
-2. Most lint issues, such as incorrect indentations, can be fixed by `black` library. Just run `black ./`
-
-3. The rest of the mising lint issues will have to be fixed manually
-
-4. Additionally, it's possible to get a detailed overview and rating of each module
-
-   Run `pylint ./{directory-name}`
-
-NOTE: pylint and black are following pep8 styling standard.
-
-### Running the Unit Tests
-
-You can trigger the unit tests of an application by running `python manage.py test`
-E.g. `python manage.py test log_management`
-
-### Running CAD in a Docker container
+### Running the framework in a Docker container
 
 1. Navigate to the root of the folder (Hint: where Dockerfile is located)
 
-2. Create a CAD Docker image by running `docker build --tag cad .`
+2. Create a framework Docker image by running `docker build --tag framework .`
 
-3. Start CAD in a container using `docker run --publish 8000:8000 cad`
+3. Start framework in a container using `docker run --publish 8000:8000 framework`
 
-4. You should be able to access CAD on `http://127.0.0.1:8000/`
+4. You should be able to access framework on `http://127.0.0.1:8000/`
