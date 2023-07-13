@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+
+{% if message %}
+<script>
+              alert({{message}})
+          </script>
+{% endif %}
+<style>
+
+    .link {
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+
+    .node {
+      cursor: move;
+      fill: #ccc;
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+
+    .node.fixed {
+      fill: #f00;
+    }
+
+            #mynetwork1 {
+                width: 800px;
+                height: 800px;
+                background-color: #ffffff;
+                border: 1px solid lightgray;
+                position: relative;
+                float: left;
+            }
+
+            #mynetwork2 {
+                width: 800px;
+                height: 800px;
+                background-color: #ffffff;
+                border: 1px solid lightgray;
+                position: relative;
+                float: left;
+            }
+
+            #mynetwork3 {
+                width: 800px;
+                height: 800px;
+                background-color: #ffffff;
+                border: 1px solid lightgray;
+                position: relative;
+                float: left;
+            }
+
+    .canvas {
+        width:800px;
+        height:800px;
+    }
+
+
+
+
+</style>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.css" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.js"> </script>
+
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="create_group-tab" data-toggle="tab" href="#create_group" role="tab" aria-controls="organisation" aria-selected="true">Zone Details</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="create_group" role="tabpanel" aria-labelledby="timeframe-tab">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-6">
+                    <div class="success_alert_message"></div>
+                    <div class="card views-card" >
+                        <div class="card-header">
+                            Select Parameters <i class="fas fa-info-circle info-icon" data-toggle="tooltip" data-placement="top" title="Here you can create new zone for Analysis"></i>
+                        </div>
+                        <div class="container">
+                            <form  name="create_group" action="" method = "POST">
+                                {% csrf_token %}
+                                <div class="input-group mb-3">
+                                    <label for="timeframe" class="col-sm-6 col-form-label">Time Frame<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <select class="custom-select" id="timeframe" name="timeframe" >
+                                            <option value="H">Hourly</option>
+                                            <option value="D" selected="selected">Daily</option>
+                                            <option value="M">Monthly</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <label for="sensitivity" class="col-sm-6 col-form-label">Identification Sensitivity<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <input id="sensitivity" name="sensitivity" value="1.5">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row" style="padding: 12px">
+                                    <input style="margin-left: auto; margin-right: auto; center" type="button" class="btn btn-primary" value = "Select Parameter" name = "select_parameter" id ='select_parameter' data-toggle="tooltip" data-placement="top" title="Select parameter"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+                    <div class="success_alert_message"></div>
+                    <div class="card views-card" >
+                        <div class="card-header">
+                            Select Zone <i class="fas fa-info-circle info-icon" data-toggle="tooltip" data-placement="top" title="Here you can create new zone for Analysis"></i>
+                        </div>
+                        <div class="container">
+                            <form  name="create_group" action="" method = "POST">
+                                {% csrf_token %}
+                                <div class="input-group mb-3">
+                                    <label for="predictor_zone" class="col-sm-6 col-form-label">Select Predictor Zone<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <select class="custom-select" id="predictor_zone" name="predictor_zone" >
+                                            {% if  active_group_details.items %}
+                                            {% for key, value in active_group_details.items %}
+                                            {% with group_name=value.group_name %}
+                                            <option value="{{group_name}}">{{group_name}}</option>
+                                            {% endwith %}
+                                            {% endfor %}
+                                            {% endif %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <label for="target_zone" class="col-sm-6 col-form-label">Select Target Zone<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <select class="custom-select" id="target_zone" name="target_zone" >
+                                            {% if  active_group_details.items %}
+                                            {% for key, value in active_group_details.items %}
+                                            {% with group_name=value.group_name %}
+                                            <option value="{{group_name}}">{{group_name}}</option>
+                                            {% endwith %}
+                                            {% endfor %}
+                                            {% endif %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row" style="padding: 12px">
+                                    <input style="margin-left: auto; margin-right: 5px;" type="button" class="btn btn-primary" value = "Analyze and Select Zone" name = "select_zone" id ='select_zone' data-toggle="tooltip" data-placement="top" title="Analyze and Select the Zone"/>
+                                    <input style="margin-right: auto; margin-left: 5px;" type="button" class="btn btn-danger" value = "Cancel" name="cancel" id ='cancel' data-toggle="tooltip" data-placement="top" title="Cancel "/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row" >
+                <div class="col-12">
+                    <div class="success_alert_message"></div>
+                    <div class="card views-card" >
+                        <div class="form-group row" style="padding: 12px">
+                        <input style="margin-left: auto; margin-right: auto; " type="button" class="btn btn-primary" value = "Analyze Interconnection and Predict" name = "analyze" id ='analyze' data-toggle="tooltip" data-placement="top" title="Analyze Interconnection and Predict"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" >
+                <div class="col-12">
+                    <div class="success_alert_message"></div>
+                    <div class="card views-card" >
+                        <div class="card-header">
+                            Diagnostics<i class="fas fa-info-circle info-icon" data-toggle="tooltip" data-placement="top" title="Here you can create new zone for Analysis"></i>
+                        </div>
+                        <div class="container-fluid" id="diagnostics">
+                            <ul class="list-group">
+                            {% for diag in diagnostics %}
+                            <li  style="margin-left: 5px; " class="list-group-item" value="{{diag}}">{{diag}}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+  $(document).ready(function() {
+        $('#list_of_activities').multiselect();
+  });
+
+
+  // Basic example
+  $(document).ready(function () {
+    $('.dataTables_length').addClass('bs-select');
+  });
+
+
+$(document).ready(function(){
+  $(this).find(".multiselect-selected-text").attr('name', 'sample_name');
+
+  $("input[name='select_zone']").click(function(){
+    var predictor_zone = $('#predictor_zone').val()
+    var target_zone = $('#target_zone').val()
+    var token = '{{csrf_token}}';
+    var home_url = "/groupmanagement/";
+    $('#diagnostics').hide();
+    if(predictor_zone != ''){
+      $.ajax({
+        headers: { "X-CSRFToken": token },
+        url: "/groupmanagement/ajax/cohortanalysisdata/",
+        type: 'POST',
+        data: {'predictor_zone': predictor_zone,'X-CSRFToken':token},
+        dataType:'json',
+      }).done(function(result) {
+        if (result.success) {
+
+        }else{
+          alert(result.responseText)
+        }
+      });
+    }
+    if(target_zone != ''){
+      $.ajax({
+        headers: { "X-CSRFToken": token },
+        url: "/groupmanagement/ajax/cohortanalysisdata/",
+        type: 'POST',
+        data: {'target_zone': target_zone,'X-CSRFToken':token},
+        dataType:'json',
+      }).done(function(result) {
+        if (result.success) {
+
+            $('#diagnostics').show();
+            $('#diagnostics').load(document.URL +  ' #diagnostics');
+        }else{
+          alert(result.responseText)
+        }
+      });
+    }
+    else{
+      alert("* fields are required!")
+    }
+  });
+});
+
+$(document).ready(function(){
+  $("input[name='analyze']").click(function(){
+    var token = '{{csrf_token}}';
+    var home_url = "/groupmanagement/";
+    $.ajax({
+        headers: { "X-CSRFToken": token },
+        url: "/groupmanagement/ajax/predict/",
+        type: 'POST',
+        data: {'X-CSRFToken':token},
+        dataType:'json',
+      }).done(function(result) {
+        if (result.success) {
+            $('#diagnostics').load(document.URL +  ' #diagnostics');
+        }else{
+          alert(result.responseText)
+        }
+      });
+  });
+});
+
+$(document).ready(function(){
+  $("input[name='select_parameter']").click(function(){
+    var token = '{{csrf_token}}';
+    var sensitivity = $('#sensitivity').val()
+    var timeframe = $('#timeframe').val()
+    var home_url = "/groupmanagement/"
+    $.ajax({
+        headers: { "X-CSRFToken": token },
+        url: "/groupmanagement/ajax/setparam/",
+        type: 'POST',
+        data: {'sensitivity': sensitivity,'timeframe': timeframe,'X-CSRFToken':token},
+        dataType:'json',
+      }).done(function(result) {
+        if (result.success) {
+            alert("Param Set")
+        }else{
+          alert(result.responseText)
+        }
+      });
+  });
+});
+
+$(document).ready(function(){
+  $("input[name='cancel']").click(function(){
+    location.reload(true);
+  });
+});
+
+$(document).ready(function(){
+  $("input[name='delete']").click(function(){
+    var group_name = $(this).attr("group_name");
+    var token = '{{csrf_token}}';
+    var home_url = "/groupmanagement/"
+    $.ajax({
+      headers: { "X-CSRFToken": token },
+      url: "/groupmanagement/ajax/changegroupstatus/",
+      type: 'POST',
+      data: {'group_name':group_name,'X-CSRFToken':token},
+      dataType:'json',
+    }).done(function(result) {
+      if (result.success) {
+          location.reload(true);
+      }else{
+        alert(result.responseText)
+      }
+    });
+  });
+});
+
+
+
+</script>
+
+{% endblock %}

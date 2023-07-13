@@ -1,0 +1,167 @@
+{% extends 'base.html' %} {% block content %}
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a
+      class="nav-link active"
+      id="setlog-tab"
+      data-toggle="tab"
+      href="#setlog"
+      role="tab"
+      aria-controls="eventlogs"
+      aria-selected="true"
+      >Log Selection</a
+    >
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="setlog" role="tabpanel" aria-labelledby="setlog-tab">
+  
+      <div class="container-fluid">
+          <h3 class="mt-4" style="color:#00529F;">Select your log attributes below..</h3>
+          <br>
+          <div class="row">
+            <div class=" col-sm-6 col-md-7 col-lg-8">
+                <form  name="setlogform" action="" method = "POST">
+                  {% csrf_token %}
+                  <div class="form-group row">
+                    <label for="logName" class="col-sm-2 col-form-label">Log Name: </label>
+                    <div class="col-sm-10">
+                      <input name="logName" type="text" readonly class="form-control-plaintext" id="logName" value="{{log_name}}">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="caseId" class="col-sm-2 col-form-label">Case ID: </label>
+                    <div class="col-sm-10">
+                      <select name="caseId" class="custom-select custom-select-md mb-3">
+                        <option selected disabled>Trace Attribute Name</option>
+                        {% for attribute in trace_attributes %}
+                            <option value="{{attribute}}">{{attribute}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="caseConcept" class="col-sm-2 col-form-label">Concept Name</label>
+                    <div class="col-sm-10">
+                      <select name="caseConcept" class="custom-select custom-select-md mb-3">
+                        <option selected disabled>Event Attribute Name</option>
+                        {% for attribute in event_attributes %}
+                            <option value="{{attribute}}">{{attribute}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="logType" class="col-sm-2 col-form-label">Log Type:</label>
+                    <div class="col-sm-10">
+                      <div class="form-check form-check-inline radio-button">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="noninterval">
+                        <label class="form-check-label" for="inlineRadio1">Single-Timestamp</label>
+                      </div>
+                      <div class="form-check form-check-inline radio-button">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="lifecycle">
+                        <label class="form-check-label" for="inlineRadio2">Lifecycle Interval</label>
+                      </div>
+                      <div class="form-check form-check-inline radio-button">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="timestamp">
+                        <label class="form-check-label" for="inlineRadio3">Start/End Timestamp Interval</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" id="noninterval" style="display: none;">
+                    <label for="timestamp" class="col-sm-2 col-form-label">Timestamp: </label>
+                    <div class="col-sm-10">
+                      <select name="timestamp" class="custom-select custom-select-md mb-3">
+                        <option selected disabled>Event Attribute Name</option>
+                        {% for attribute in event_attributes %}
+                            <option value="{{attribute}}">{{attribute}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row" id="lifecycle" style="display: none;">
+                    <label for="lifecycle" class="col-sm-2 col-form-label">Lifecycle Event: </label>
+                    <div class="col-sm-10">
+                      <select name="lifecycle" class="custom-select custom-select-md mb-3">
+                        <option selected disabled>Event Attribute Name</option>
+                        {% for attribute in event_attributes %}
+                            <option value="{{attribute}}">{{attribute}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <label for="lifecycle" class="col-sm-2 col-form-label">Timestamp: </label>
+                    <div class="col-sm-10">
+                       <select name="timestamp" class="custom-select custom-select-md mb-3">
+                        <option selected disabled>Event Attribute Name</option>
+                        {% for attribute in event_attributes %}
+                            <option value="{{attribute}}">{{attribute}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div id="timestamp" style="display: none;">
+                    <div class="form-group row">
+                      <label for="startTimestamp" class="col-sm-2 col-form-label">Start Timestamp: </label>
+                      <div class="col-sm-10">
+                        <select name="startTimestamp" class="custom-select custom-select-md mb-3">
+                          <option selected disabled>Event Attribute Name</option>
+                          {% for attribute in event_attributes %}
+                              <option value="{{attribute}}">{{attribute}}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="endTimestamp" class="col-sm-2 col-form-label">End Timestamp: </label>
+                      <div class="col-sm-10">
+                        <select name="endTimestamp" class="custom-select custom-select-md mb-3">
+                          <option selected disabled>Event Attribute Name</option>
+                          {% for attribute in event_attributes %}
+                              <option value="{{attribute}}">{{attribute}}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <input style="margin-top: 10px;" data-toggle="tooltip" data-placement="top" title="Set as the input" type = "submit" class="btn btn-success" value = "Select" name= "setButton" id ='setButton' />
+                  <a style="margin-top: 10px;" class="btn btn-danger" href="/logmanagement/" role="cancelButton">Cancel</a>
+                </form>
+            </div>
+          </div>
+        </div>
+  
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+  <script>
+    $(document).ready(function(){
+        $("input[name='inlineRadioOptions']").click(function(){
+            var radioValue = $("input[name='inlineRadioOptions']:checked").val();
+            console.log(radioValue)
+            switch(radioValue) {
+              case 'noninterval':
+                  $("#lifecycle").hide(500)
+                  $("#timestamp").hide(500)
+                  $("#noninterval").show(1000)
+                  break;
+                
+                case 'lifecycle':
+                  $("#noninterval").hide(500)
+                  $("#timestamp").hide(500)
+                  $("#lifecycle").show(1000)
+                  break;
+                  
+                case 'timestamp':
+                  $("#noninterval").hide(500)
+                  $("#lifecycle").hide(500)
+                  $("#timestamp").show(1000)
+                  break;
+            }
+        });
+    });
+
+  </script>
+
+{% endblock %}

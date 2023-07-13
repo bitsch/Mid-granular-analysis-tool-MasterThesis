@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+    <title>Cohort Analysis Dashboard</title>
+
+  <link href="{% static 'css/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/0c8901811a.js" crossorigin="anonymous"></script>
+
+  <!-- Daterange picker css-->
+  <link href="{% static 'css/daterangepicker.css' %}" rel="stylesheet">
+
+
+ 
+  <!-- Custom styles for this template -->
+
+
+  <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
+
+  <link href="{% static 'css/mystyle.css' %}" rel="stylesheet">
+
+
+  <!-- Bootstrap multiselect temporary css add -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.16/css/bootstrap-multiselect.css" type="text/css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.16/css/bootstrap-multiselect.min.css" integrity="sha512-wHTuOcR1pyFeyXVkwg3fhfK46QulKXkLq1kxcEEpjnAPv63B/R49bBqkJHLvoGFq6lvAEKlln2rE1JfIPeQ+iw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap multiselect css end -->
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+
+      <div class="list-group list-group-flush">
+        <div class="sidebar-heading"><img style='height: 100%; width:100%;object-fit: contain ' src="{% static 'images/PADSLOGO.png' %}"/> </div>
+        <a href="/logmanagement/" class="list-group-item list-group-item-action bg-light">Log Management</a>
+        <a href="/views" class="list-group-item list-group-item-action bg-light">Views</a>
+        <a href="/groupmanagement" class="list-group-item list-group-item-action bg-light">Group Management</a>
+        <a href="/group_analysis" class="list-group-item list-group-item-action bg-light">Analysis</a>
+         <!--<a href="/role_mining" class="list-group-item list-group-item-action bg-light">Conformance Checking</a>
+        <a href="/coming_main" class="list-group-item list-group-item-action bg-light">Coming Soon...</a>  -->
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://www.pads.rwth-aachen.de/cms/~pnbx/PADS/?lidx=1">About US</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="https://github.com/bitsch/Mid-granular-analysis-tool-MasterThesis">Project Link</a>
+            </li>
+            <!--<li class="nav-item dropdown">-->
+              <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <!--Dropdown-->
+              <!--</a>-->
+              <!--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">-->
+                <!--<a class="dropdown-item" href="#">Action</a>-->
+                <!--<a class="dropdown-item" href="#">Another action</a>-->
+              <!--</div>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </nav>
+
+      {% block content %}
+
+      {% endblock %}
+
+    </div>
+
+
+
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'css/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'css/vendor/jquery/popper.min.js' %}"></script>
+  <script src="{% static 'css/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'css/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+ <!-- Daterange picker js-->
+ <script src="{% static 'js/daterangepicker.js' %}"></script>
+ <script src="{% static 'js/moment.min.js' %}"></script>
+  
+  <!-- Menu Toggle Script -->
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+
+
+  <!-- Bootstrap multiselect temporary js add -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.16/js/bootstrap-multiselect.min.js"></script>
+  <!-- Bootstrap multiselect js end -->
+
+  {% block script %}
+
+  {% endblock %}
+
+</body>
+
+</html>

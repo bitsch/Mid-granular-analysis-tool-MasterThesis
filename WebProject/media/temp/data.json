@@ -1,0 +1,120 @@
+{
+    "nodes": [
+        {
+            "id": "node_0",
+            "name": "register patient",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "register patient"
+                }
+            ]
+        },
+        {
+            "id": "node_1",
+            "name": "doctor test",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "doctor test"
+                }
+            ]
+        },
+        {
+            "id": "node_2",
+            "name": "initial check",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "initial check"
+                }
+            ]
+        },
+        {
+            "id": "node_3",
+            "name": "hospital admission",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "hospital admission"
+                }
+            ]
+        },
+        {
+            "id": "node_4",
+            "name": "medicine collection",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "medicine collection"
+                }
+            ]
+        },
+        {
+            "id": "node_5",
+            "name": "hospital exit",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "hospital exit"
+                }
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "source": "node_0",
+            "target": "node_2",
+            "label": 2710,
+            "style": {
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_1",
+            "label": 2437,
+            "style": {
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_1",
+            "target": "node_4",
+            "label": 2710,
+            "style": {
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_4",
+            "target": "node_5",
+            "label": 2710,
+            "style": {
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_3",
+            "label": 273,
+            "style": {
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_3",
+            "target": "node_1",
+            "label": 273,
+            "style": {
+                "endArrow": true
+            }
+        }
+    ]
+}
